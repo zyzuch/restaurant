@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OMEN — забивка 100×35 mm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg0: #0a0908;
+      --bg1: #161310;
+      --ink: #f1ebe3;
+      --muted: #8b847a;
+      --accent: #b85a32;
+      --warn-bg: #241712;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      gap: 20px;
+      background:
+        radial-gradient(ellipse at 85% 100%, #2a2018 0%, transparent 45%),
+        #100e0c;
+      color: var(--ink);
+      font-family: "IBM Plex Sans", sans-serif;
+      padding: 32px 16px;
+    }
+    .meta {
+      width: 100mm;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .label {
+      width: 100mm;
+      height: 35mm;
+      background: linear-gradient(96deg, var(--bg1) 0%, var(--bg0) 72%);
+      display: grid;
+      grid-template-columns: 28mm 1fr;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 14px 44px rgba(0,0,0,0.5);
+    }
+    .left {
+      padding: 2.2mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 0.45mm solid var(--accent);
+      background: linear-gradient(180deg, rgba(184,90,50,0.14), transparent 62%);
+    }
+    .brand {
+      font-family: Oswald, sans-serif;
+      font-weight: 700;
+      font-size: 12pt;
+      letter-spacing: 0.2em;
+      line-height: 1;
+    }
+    .craft {
+      font-size: 4.2pt;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 1mm;
+    }
+    .left-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 1mm;
+      font-size: 5.2pt;
+      font-weight: 600;
+    }
+    .left-meta .age { color: var(--accent); font-size: 8pt; font-family: Oswald, sans-serif; letter-spacing: 0.06em; }
+    .blank {
+      display: inline-block;
+      width: 11mm;
+      border-bottom: 0.25mm solid rgba(241,235,227,0.5);
+      height: 2mm;
+      vertical-align: baseline;
+    }
+    .right {
+      display: grid;
+      grid-template-rows: 1fr 7mm;
+    }
+    .tips {
+      padding: 2mm 2.4mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.1mm;
+    }
+    .tips h2 {
+      font-family: Oswald, sans-serif;
+      font-size: 5.6pt;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .tips p {
+      font-size: 5.3pt;
+      line-height: 1.28;
+      font-weight: 500;
+    }
+    .bottom {
+      background: var(--warn-bg);
+      border-top: 0.28mm solid rgba(184,90,50,0.75);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2mm;
+      padding: 0 2.4mm;
+      font-size: 4.3pt;
+      font-weight: 500;
+    }
+    .bottom .fields {
+      display: inline-flex;
+      gap: 2.5mm;
+      white-space: nowrap;
+    }
+    .bottom .line {
+      display: inline-block;
+      width: 12mm;
+      border-bottom: 0.25mm solid rgba(241,235,227,0.45);
+      height: 1.8mm;
+      vertical-align: baseline;
+    }
+    @media print {
+      body { background: none; padding: 0; display: block; }
+      .meta { display: none; }
+      .label { box-shadow: none; }
+      @page { size: 100mm 35mm; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <p class="meta">OMEN · варіант забивки · 100×35 мм</p>
+  <article class="label" aria-label="Стікер забивки OMEN">
+    <aside class="left">
+      <div>
+        <div class="brand">OMEN</div>
+        <p class="craft">Сирий крафт · UA</p>
+      </div>
+      <div class="left-meta">
+        <span>Нетто: <span class="blank"></span> г</span>
+        <span class="age">18+</span>
+      </div>
+    </aside>
+    <div class="right">
+      <div class="tips">
+        <h2>Як забивати</h2>
+        <p>Тонкостінна глиняна чаша — рівний жар без «запарювання» листа.</p>
+        <p>Прямий потік повітря. Вугілля: 2–3 шт. за розміром чаші. Не перегрівайте.</p>
+      </div>
+      <footer class="bottom">
+        <span class="fields">Партія: <span class="line"></span> Дата: <span class="line"></span></span>
+        <span>Отрути · канцерогени · мутагени · 24 міс. · OMEN, UA</span>
+      </footer>
+    </div>
+  </article>
+</body>
+</html>
